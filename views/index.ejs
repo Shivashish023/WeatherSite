@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather site</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+<div class="header">    
+    <h1 class="heading"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cloud" viewBox="0 0 16 16">
+        <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383m.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"/>
+      </svg>.Weatherly</h1>
+</div>
+
+
+
+    <div class="main-box">
+    <form action="/search" method="post">
+        <input class="searchbox" name="searchbox" type="search" placeholder="<%= locals.error ? error :  'Enter city name'%>">
+        <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+          </svg></button>
+    </form>
+   <div class="info-box">
+    <div class="today-box">
+        <div class="locbox">
+
+        
+       
+          <p class="cityname">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+          </svg>.. <%=   CityName %> </p>
+          <p class="cityname Date"><%= Date %></p>
+    </div>
+    
+    
+        <div class="tempbox">
+          <img src="<%= icon %>" alt="">
+          <h1 style="margin-right: 0;" class="temp"><%= Temperature %>°</h1><p style="font-size: 30px; margin-left: 0;">C</p>
+        </div>
+        <h2 id="wea"><%= WeaCond %></h2>
+        <div class="others">
+            <div class="mini 1">
+                <p>Humidity</p>
+                <h3><%= Humidity %>  %</h3>
+            </div>
+            <div class="mini 2">
+                <p>Wind</p>
+                <h3><%= WindSpeed %> km/hr</h3>
+            </div>
+        </div>
+        
+    </div>
+   <!--<div class="forecast-box">
+
+        <div class="time-box">
+           <div class="time-stamps">
+            <h3 class=" head1"></h3>
+            <img src="https://openweathermap.org/img/w/04d.png" alt="">
+            <h3 class=" head2 ">06:00</h3>
+           </div>
+           <div class="time-stamps">
+            <h3 class=" head1">21°</h3>
+            <img src="https://openweathermap.org/img/w/04d.png" alt="">
+            <h3 class=" head2 ">06:00</h3>
+           </div>
+           <div class="time-stamps">
+            <h3 class=" head1">21°</h3>
+            <img src="https://openweathermap.org/img/w/04d.png" alt="">
+            <h3 class=" head2 ">06:00</h3>
+           </div>
+           <div class="time-stamps">
+            <h3 class=" head1">21°</h3>
+            <img src="https://openweathermap.org/img/w/04d.png" alt="">
+            <h3 class=" head2 ">06:00</h3>
+           </div>
+           <div class="time-stamps">
+            <h3 class=" head1">21°</h3>
+            <img src="https://openweathermap.org/img/w/04d.png" alt="">
+            <h3 class=" head2 ">06:00</h3>
+           </div>
+        </div>
+        
+    </div>
+   </div>-->
+</div>
+    
+</body>
+</html>
